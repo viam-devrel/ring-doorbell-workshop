@@ -7,14 +7,16 @@ from viam.proto.common import ResourceName
 from viam.resource.base import ResourceBase
 from viam.resource.easy_resource import EasyResource
 from viam.resource.types import Model, ModelFamily
-from viam.services.generic import GenericService
+from viam.services.generic import Generic
 from viam.services.vision import VisionClient
 from viam.utils import ValueTypes
 
-
-class DoorbellService(GenericService, EasyResource):
+# IMPORTANT: Do not change the class name or the MODEL triplet below.
+# The platform uses these auto-generated values to identify your module.
+# Changing them will break your inline module.
+class MyGenericService(Generic, EasyResource):
     MODEL: ClassVar[Model] = Model(
-        ModelFamily("viam-devrel", "ring-doorbell"), "doorbell"
+        ModelFamily("viam-devrel", "ring-doorbell"), "generic-service"
     )
 
     board: Board
@@ -40,7 +42,7 @@ class DoorbellService(GenericService, EasyResource):
         self, command: Mapping[str, ValueTypes], **kwargs
     ) -> Mapping[str, ValueTypes]:
         # Get the GPIO pin connected to the LED
-        led_pin = await self.board.gpio_pin_by_name("17")
+        led_pin = await self.board.gpio_pin_by_name("11")
 
         # Ask the vision service for detections from the camera
         detections = await self.detector.get_detections_from_camera("camera-1")

@@ -12,7 +12,7 @@ Before we start building, let's make sure you have everything you need.
 | LED | Any standard 5mm through-hole LED |
 | 220Ω resistor | Limits current to protect the LED |
 | Breadboard | Half-size or larger |
-| Jumper wires | 2x male-to-female, 1x male-to-male |
+| Jumper wires | 2x male-to-female |
 
 ## Software
 

@@ -19,9 +19,9 @@ Power the Pi back on when done.
 To control the LED through Viam, we need to add a **board** component. The board component gives Viam access to the Raspberry Pi's GPIO pins.
 
 1. In the Viam app, navigate to your machine's **CONFIGURE** tab.
-2. Click **+** (Add component).
+2. Click **+** (Add Configuration Block).
 3. Search for `pi5`.
-4. Select **board / pi5**.
+4. Select **raspberry-pi / pi5**.
 5. Name it `board-1`.
 6. Click **Create**.
 
@@ -31,15 +31,14 @@ No additional attributes are needed — the default configuration works out of t
 
 ## Test the LED from the Viam App
 
-1. Navigate to the **CONTROL** tab.
-2. Find the `board-1` card and expand it.
-3. In the **GPIO** section, find the pin controls.
-4. Enter pin number `17` in the pin field.
-5. Click **Set** to set the pin high (3.3V).
+1. On the **CONFIGURE** tab, expand the `board-1` component card.
+2. In the **Test** section, find the GPIO pin controls.
+3. Enter pin number `11` in the pin field.
+4. Click **Set** to set the pin high (3.3V).
 
-Your LED should turn on!
+Your LED should turn on.
 
-6. Click **Set** again to set the pin low (0V).
+5. Click **Set** again to set the pin low (0V).
 
 Your LED should turn off.
 

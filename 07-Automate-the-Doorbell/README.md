@@ -23,7 +23,7 @@ Replace all the template code with the contents of [`doorbell.py`](doorbell.py) 
 
 The code:
 - Declares `board-1` and `person-detector` as dependencies
-- In `do_command`: gets detections from the camera, checks if any detection has the class `"Person"` with confidence > 0.5, and sets GPIO pin 17 high (LED on) or low (LED off)
+- In `do_command`: gets detections from the camera, checks if any detection has the class `"Person"` with confidence > 0.5, and sets GPIO pin 11 high (LED on) or low (LED off)
 - Returns `{"person_detected": true/false}` so you can see the result in the CONTROL tab
 
 ## Deploy the Module
@@ -32,13 +32,23 @@ The code:
 2. Viam will build the module in the cloud — this typically takes 2–5 minutes.
 3. Watch the build status; if it fails, click **View Logs** to see the error.
 
-## Add Dependencies
+## Add the Module to Your Machine
 
-Once the module is deployed:
+Once the build succeeds:
 
-1. Find the `doorbell` service card in the CONFIGURE tab.
-2. In the **Depends on** section, add `board-1` and `person-detector`.
-3. Click **Save**.
+1. Click **Add to Machine** in the browser editor.
+2. Select your Location and Machine.
+3. Click **Add**.
+
+## Add the Service Configuration Block
+
+Adding the module to your machine does not automatically add the service. You need to add it manually:
+
+1. Back on your machine's **CONFIGURE** tab, click **+** (Add Configuration Block).
+2. Search for `doorbell`.
+3. Select the doorbell service and click **Add Component**.
+4. In the **Depends on** section, add `board-1` and `person-detector`.
+5. Click **Save**.
 
 ## Add a Continuous Job
 
@@ -60,11 +70,7 @@ Stand in front of the camera — the LED should light up within a second or two.
 
 Step away — the LED should turn off.
 
-You can also test manually:
-1. Go to the **CONTROL** tab.
-2. Find the `doorbell` card.
-3. In the **DoCommand** section, enter `{}` and click **Execute**.
-4. The response will show `{"person_detected": true}` or `{"person_detected": false}`.
+You can also test manually from the **CONFIGURE** tab: expand the `doorbell` service card, find the **DoCommand** section, enter `{}`, and click **Execute**. The response will show `{"person_detected": true}` or `{"person_detected": false}`.
 
 ## Congratulations!
 

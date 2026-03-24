@@ -5,11 +5,11 @@ The vision service connects your ML model to your camera. It takes frames from t
 ## Add a Vision Service
 
 1. In the Viam app, navigate to your machine's **CONFIGURE** tab.
-2. Click **+** (Add service).
+2. Click **+** (Add Configuration Block).
 3. Search for `mlmodel`.
 4. Select **Vision / mlmodel**.
 5. Name it `person-detector`.
-6. Click **Create**.
+6. Click **Add Component**.
 
 ## Configure the Vision Service
 

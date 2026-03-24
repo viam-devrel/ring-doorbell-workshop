@@ -9,7 +9,7 @@ Connect your USB webcam to one of the Raspberry Pi's USB ports.
 ## Add a Camera Component
 
 1. In the Viam app, navigate to your machine's **CONFIGURE** tab.
-2. Click **+** (Add component).
+2. Click **+** (Add Configuration Block).
 3. Search for `webcam`.
 4. Select **camera / webcam**.
 5. Name it `camera-1`.
@@ -21,7 +21,7 @@ The camera component will appear in your configuration. Leave the `video_path` a
 
 ## Verify the Camera Feed
 
-On the **CONFIGURE** tab, expand the `camera-1` component card. Use the built-in test panel at the bottom of the card to stream a live preview and confirm the camera is working.
+On the **CONFIGURE** tab, expand the `camera-1` component card. Expand the built-in test panel at the bottom of the card to stream a live preview and confirm the camera is working.
 
 ---
 
