@@ -6,11 +6,11 @@ In this step you'll wire the LED to the Raspberry Pi and then add a **board** co
 
 With the Pi powered off, wire the circuit on your breadboard:
 
-```
-Pi Pin 11 (GPIO 17) → 220Ω resistor → LED (long leg/+) → LED (short leg/-) → Pi Pin 9 (GND)
-```
+![Wiring diagram](wiring-diagram.svg)
 
-**Important:** LEDs are polarized — the longer leg (+) connects toward the resistor, the shorter leg (-) connects to GND.
+- **Pi Pin 11 (GPIO 17)** → 220Ω resistor → LED long leg (+) → LED short leg (−) → **Pi Pin 9 (GND)**
+
+**Important:** LEDs are polarized — the longer leg (+) connects toward the resistor, the shorter leg (−) connects to GND.
 
 Power the Pi back on when done.
 
