@@ -21,6 +21,8 @@ The browser-based code editor will open with a template.
 
 Replace all the template code with the contents of [`doorbell.py`](doorbell.py) from this directory.
 
+In the MODEL declaration, be sure to udpate `viam-devrel` to `starkhacks` and `ring-doorbell` to `doorbell`. This aligns your model your namespace and module name.
+
 The code:
 - Declares `board-1` and `person-detector` as dependencies
 - In `do_command`: gets detections from the camera, checks if any detection has the class `"Person"` with confidence > 0.5, and sets GPIO pin 11 high (LED on) or low (LED off)
@@ -47,7 +49,7 @@ Adding the module to your machine does not automatically add the service. You ne
 1. Back on your machine's **CONFIGURE** tab, click **+** (Add Configuration Block).
 2. Search for `doorbell`.
 3. Select the doorbell service and click **Add Component**.
-4. In the **Depends on** section, add `board-1` and `person-detector`.
+4. In the **Attributes** section, add your board and detector dependencies like so: `"board": "board-1", "detector": "person-detector"`
 5. Click **Save**.
 
 ## Add a Continuous Job
